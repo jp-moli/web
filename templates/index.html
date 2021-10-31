@@ -2,22 +2,35 @@
 
 {% block body %}
 
-    
 <div class="container">
-    <h1>Index del moli</h1>
-
-    <div class="row">
-      <div class="col order-last">
-        First in DOM, ordered last
+    
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ url_for('static', filename='img/una.jpg')}}" class="d-block w-100" alt="...">
       </div>
-      <div class="col">
-        Second in DOM, unordered
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='img/dos.jpg')}}" class="d-block w-100" alt="...">
       </div>
-      <div class="col order-first">
-        Third in DOM, ordered first
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='img/tres.jpg')}}" class="d-block w-100" alt="...">
       </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
+</div>
     
 
 {% endblock %}    
